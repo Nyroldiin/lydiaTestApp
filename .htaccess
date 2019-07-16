@@ -1,0 +1,11 @@
+DirectoryIndex index.php
+Options -Indexes
+RewriteEngine on
+RewriteBase /
+
+#req
+RewriteRule ^req-(.*).html includes/req/$1.php [L]
+
+
+RewriteRule ^(.*)/(.*).html$ index.php?p=$2&data=$1 [L]
+RewriteRule ^(.*).html$ index.php?p=$1 [L]

@@ -1,0 +1,187 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #0D3654;
+	color: #ffffff;
+}
+
+.errorreponse {
+	display: block;
+	width: 100%;
+	color: red;
+}
+
+.newTrans {
+	display: block;
+}
+
+.form-signin {
+	width: 100%;
+	max-width: 330px;
+	padding: 15px;
+	margin: auto;
+}
+
+.form-signin .checkbox {
+	font-weight: 400;
+}
+
+.form-signin .form-control {
+	position: relative;
+	box-sizing: border-box;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+
+.form-signin .inputFirst {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.form-signin .inputMiddle {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-bottom: -2px;
+}
+
+.form-signin .inputEnd {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.flip-div {
+	width: 330px;
+    height: 270px;
+    perspective: 1000px;
+    perspective: 1000px;
+}
+
+.flip-div-inner {
+  	position: relative;
+  	width: 100%;
+  	height: 100%;
+  	text-align: center;
+  	transition: transform 0.8s;
+  	transform-style: preserve-3d;
+}
+
+.flip-div.active .flip-div-inner {
+  	transform: rotateY(180deg);
+}
+
+.flip-div-front, .flip-div-back {
+  	position: absolute;
+  	width: 100%;
+  	height: 100%;
+  	backface-visibility: hidden;
+    background-color: #0d3654;
+    z-index: 3;
+}
+
+.flip-div-back {
+  	background-color: #0d3654;
+  	color: white;
+  	transform: rotateY(180deg);
+}
+
+.circle-loader {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  	border: 1px solid rgba(0, 0, 0, 0.2);
+  	border-left-color: #5cb85c;
+  	animation: loader-spin 1.2s infinite linear;
+  	position: relative;
+  	display: inline-block;
+  	vertical-align: top;
+  	border-radius: 50%;
+  	width: 7em;
+  	height: 7em;
+}
+
+.load-complete {
+  	-webkit-animation: none;
+  	animation: none;
+  	border-color: #5cb85c;
+  	transition: border 500ms ease-out;
+}
+
+.checkmark {
+  	display: none;
+}
+.checkmark.draw:after {
+  	animation-duration: 800ms;
+  	animation-timing-function: ease;
+  	animation-name: checkmark;
+  	transform: scaleX(-1) rotate(135deg);
+}
+.checkmark:after {
+  	opacity: 1;
+  	height: 3.5em;
+  	width: 1.75em;
+  	transform-origin: left top;
+  	border-right: 3px solid #5cb85c;
+  	border-top: 3px solid #5cb85c;
+  	content: '';
+  	left: 1.75em;
+  	top: 3.5em;
+  	position: absolute;
+}
+
+
+.lydiaTable{
+	color: #ffffff;
+}
+
+.lydiaTable .thead-dark th{
+	background-color: #007abe;
+}
+
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 1.75em;
+    opacity: 1;
+  }
+  40% {
+    height: 3.5em;
+    width: 1.75em;
+    opacity: 1;
+  }
+  100% {
+    height: 3.5em;
+    width: 1.75em;
+    opacity: 1;
+  }
+}
